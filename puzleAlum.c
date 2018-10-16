@@ -67,10 +67,10 @@ void dispOperador(unsigned op)
 {
    switch(op)
    {
-      case ARRIBA:    printf("Movimiento ARRIBA:\n"); break;
-      case ABAJO:     printf("Movimiento ABAJO:\n"); break;
-      case IZQUIERDA: printf("Movimiento IZQUIERDA:\n"); break;
-      case DERECHA:   printf("Movimiento DERECHA:\n"); break;
+      case ARRIBA:    printf("\nMovimiento ARRIBA:\n"); break;
+      case ABAJO:     printf("\nMovimiento ABAJO:\n"); break;
+      case IZQUIERDA: printf("\nMovimiento IZQUIERDA:\n"); break;
+      case DERECHA:   printf("\nMovimiento DERECHA:\n"); break;
    }
 }
 
@@ -139,9 +139,10 @@ int valido;
 tEstado *aplicaOperador(unsigned op, tEstado *estado)
 {
      tEstado *nuevo= (tEstado *) malloc(sizeof(tEstado));
-    memcpy(nuevo, estado,sizeof(tEstado));  // Hace una copia del estado
+    memcpy (nuevo, estado,sizeof(tEstado));  // Hace una copia del estado
 
 int cambio;
+
 
 
     switch(op){
@@ -156,12 +157,12 @@ int cambio;
                      break;
     }
 
-cambio = *nuevo->celdas[nuevo->fila[0],nuevo->col[0]];
+cambio = *estado->celdas[nuevo->fila[0],nuevo->col[0]];
+
 *nuevo->celdas[nuevo->fila[0],nuevo->col[0]] = 0;
 
 *nuevo->celdas[estado->fila[0],estado->col[0]] = cambio;
 
-dispOperador(op);
 
 return nuevo;
 
