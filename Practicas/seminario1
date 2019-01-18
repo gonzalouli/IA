@@ -1,0 +1,58 @@
+Seminario 1
+
+Robi y susi son dos animales.
+robi con pelo y color leonado y rayas negras
+Susi tiene plumas y es blanco
+Robi no vuela 
+Susi vuela
+Robi come carne
+Susi come pescado
+
+(animal, robi)
+(animal, susi)
+(color, robi, leonado)
+(color, robi, rayas negras)
+(color, susi, blanco)                   ///caracteristica comun primera///
+(tiene, robi, pelo)
+(tiene, susi, plumas)
+(vuela, robi, no)
+(vuela, susi, si, bien)
+(come, robi, carne)
+(come, susi, pescado)
+
+(LANZAMIENTO DE REGLAS)
+
+1) (mamifero, robi)
+3) (ave, susi)
+5) (robi carnivoro)
+10) (robi, tigre)
+15) (susi, albatros)
+
+///conocimiento actual del sistema completo///
+
+-Lanzamiento de reglas-
+r1 r3 r5 
+
+r1 se lanza -> se produce un nuevo hecho, robi es mamifero
+---
+-lanzamiento de reglas-
+r3 r5 
+
+r3 se lanza -> nuevo hecho, susi es un ave)
+
+-lanzamiento de reglas-
+r5 r15
+
+r5 se lanza -> nuevo hecho, si come carne es carinovo, robi come carne, robi es carnivoro
+
+-lanzamiento de reglas-
+r10 r15
+
+
+r10 -> robi es tigre
+r15 -> susi es albatros
+
+
+
+
+

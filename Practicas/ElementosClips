@@ -1,0 +1,47 @@
+#####Elementos fundamentaloes el clips#####
+
+
+DEFFACTS: creacion de hechos iniciales
+    (deffacts <nombre>  
+                    <hecho>*)
+
+ASSERT: Creacion de nuevos hechos durante el ciclo de ejecucion
+    (assert <hecho>*)
+
+DEFRULE: Definicion de reglas
+    (defrule <nom regla> 
+            <condicion>* 
+        => <accion>*)
+
+
+VARIABLES EN CLIPS
+    ( ? <nombre> )
+
+
+CLIPS
+
+
+
+
+(deffacts animales
+            (pelo mamifero)
+            
+
+            )
+
+(defrule es_mamifero
+
+    (animal) (tiene ?x pelo)
+    => (    assert (?x mamifero)    )
+)
+    
+
+
+
+
+
+
+
+
+
+
